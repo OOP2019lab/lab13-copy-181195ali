@@ -1,0 +1,70 @@
+// Answers.txt
+
+Exercise 1:
+(a)Written.
+
+(b)It did.
+6
+10
+Press any key to continue . . .
+
+(c)No error.
+6
+10
+Press any key to continue . . .
+
+(d)Done.
+90
+10
+Press any key to continue . . .
+
+(e)No error.
+90
+10
+Press any key to continue . . .
+
+//181195.cpp
+
+#include <iostream>
+using namespace std;
+template <typename T>
+class Pair
+{
+	T values[2];
+public:
+	Pair(T a,T b)
+	{
+		values[0] = a;
+		values[1] = b;
+	}
+	T Pair<T>::GetMax()
+	{
+		if(values[0]>values[1])
+			return values[0];
+		return values[1];
+	}
+	T Pair<T>::GetMin()
+	{
+		if(values[0]<values[1])
+			return values[0];
+		return values[1];	
+	}
+	ostream& operator<<(ostream& fout,Pair& p)
+	{
+		fout<<p.values[0];
+		fout<<p.values[1];
+		return fout;
+	}
+};
+
+int main()
+{
+	Pair <double> myobject (1.012, 1.01234);
+	cout<<myobject.GetMax()<<endl;
+    cout<<myobject.GetMin()<<endl;
+	cout<<myobject<<endl;
+    return 0;
+
+
+
+
